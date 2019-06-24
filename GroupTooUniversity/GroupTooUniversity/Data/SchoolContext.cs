@@ -20,50 +20,11 @@ namespace GroupTooUniversity.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<Instructor>(b =>
-            {
-                b.ToTable("Instructor");
-                b.Property(i => i.FirstMidName)
-                    .IsRequired()
-                    .HasMaxLength(256);
-                b.Property(i => i.Email)
-                    .IsRequired()
-                    .HasMaxLength(256);
-            });
-
-            modelBuilder.Entity<Student>(b =>
-            {
-                b.ToTable("Student");
-                b.HasAlternateKey(u => u.ID);
-                b.Property(u => u.FirstMidName)
-                    .IsRequired()
-                    .HasMaxLength(256);
-                b.Property(u => u.Email)
-                    .IsRequired()
-                    .HasMaxLength(256);
-            });
-
-            modelBuilder.Entity<Survey>(b =>
-            {
-                b.ToTable("Survey");
-                b.HasKey(s => s.SurveyID);
-                b.HasOne(s => s.Owner)
-                    .WithMany()
-                    .OnDelete(DeleteBehavior.Restrict);
-            });
-
-            modelBuilder.Entity<Course>(b =>
-            {
-                b.ToTable("Course");
-                b.HasKey(c => c.CourseID);
-                b.Property(c => c.Title)
-                .IsRequired()
-                .HasMaxLength(256);
-                b.Property(c => c.Credits)
-                .HasDefaultValue(0);
-            });
+            modelBuilder.Entity<Course>().ToTable("Course");
+            modelBuilder.Entity<Survey>().ToTable("Survey");
+            modelBuilder.Entity<Student>().ToTable("Student");
+            modelBuilder.Entity<Question>().ToTable("Question");
+            modelBuilder.Entity<Instructor>().ToTable("Instructor");
         }
     }
 }
