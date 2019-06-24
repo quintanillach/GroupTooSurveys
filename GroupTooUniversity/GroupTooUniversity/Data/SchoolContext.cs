@@ -17,6 +17,9 @@ namespace GroupTooUniversity.Data
         public DbSet<Survey> Surveys { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<OfficeAssignment> OfficeAssignments { get; set; }
+        public DbSet<CourseAssignment> CourseAssignments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,6 +28,12 @@ namespace GroupTooUniversity.Data
             modelBuilder.Entity<Student>().ToTable("Student");
             modelBuilder.Entity<Question>().ToTable("Question");
             modelBuilder.Entity<Instructor>().ToTable("Instructor");
+            modelBuilder.Entity<Department>().ToTable("Department");
+            modelBuilder.Entity<OfficeAssignment>().ToTable("OfficeAssignment");
+            modelBuilder.Entity<CourseAssignment>().ToTable("CourseAssignment");
+
+            modelBuilder.Entity<CourseAssignment>()
+                .HasKey(c => new { c.CourseID, c.InstructorID });
         }
     }
 }

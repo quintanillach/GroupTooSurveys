@@ -36,6 +36,7 @@ namespace GroupTooUniversity.Models
             get { return LastName + ", " + FirstMidName; }
         }
 
+        public ICollection<Survey>Surveys { get; set; }
         public ICollection<CourseAssignment> CourseAssignments { get; set; }
         public OfficeAssignment OfficeAssignment { get; set; }
 

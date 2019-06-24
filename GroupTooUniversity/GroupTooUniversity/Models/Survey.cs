@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GroupTooUniversity.Models
 {
@@ -26,6 +27,8 @@ namespace GroupTooUniversity.Models
         public bool Published { get; set; }
 
         public Course Course { get; set; }
+
+        public Student Student { get; set; }
 
         public Instructor Owner { get; set; }
         public virtual ICollection<Question> Questions { get; set; }
