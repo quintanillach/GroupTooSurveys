@@ -1,0 +1,30 @@
+﻿@model IEnumerable<GroupTooUniversity.Models.SchoolViewModels.SurveyDateGroup>
+
+@{
+  ViewData["Title"] = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table>
+  <tr>
+    <th>
+      Survey Date
+    </th>
+    <th>
+      Students
+    </th>
+  </tr>
+
+  @foreach (var item in Model)
+  {
+    <tr>
+      <td>
+        @Html.DisplayFor(modelItem => item.SurveyDate)
+      </td>
+      <td>
+        @item.StudentCount
+      </td>
+    </tr>
+  }
+</table>
