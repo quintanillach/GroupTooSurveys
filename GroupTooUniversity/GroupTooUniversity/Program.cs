@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using GroupTooUniversity.Data;
 
+
 namespace GroupTooUniversity
 {
     public class Program

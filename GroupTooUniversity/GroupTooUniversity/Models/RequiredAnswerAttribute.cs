@@ -18,7 +18,7 @@ namespace GroupTooUniversity.Models
                 return base.IsValid(value);
             }
 
-            if (question.Type == QuestionType.MultipleChoice || question.Type == QuestionType.CheckBoxes)
+            if (question.Type == Type.MultipleChoice || question.Type == Type.CheckBoxes)
             {
                 return !string.IsNullOrEmpty(question.PossibleAnswers);
             }

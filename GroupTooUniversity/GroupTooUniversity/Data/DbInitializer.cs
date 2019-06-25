@@ -20,41 +20,41 @@ namespace GroupTooUniversity.Data
 
             var students = new Student[]
             {
-                new Student { FirstMidName = "Carson",   LastName = "Alexander", Email = "carson.alexander@gtoo.microsoft.com",
-                    SurveyDate = DateTime.Parse("2010-09-01") },
-                new Student { FirstMidName = "Meredith", LastName = "Alonso", Email = "meredith.alonso@gtoo.microsoft.com",
-                    SurveyDate = DateTime.Parse("2012-09-01") },
-                new Student { FirstMidName = "Arturo",   LastName = "Anand", Email = "arturo.anand@gtoo.microsoft.com",
-                    SurveyDate = DateTime.Parse("2013-09-01") },
-                new Student { FirstMidName = "Gytis",    LastName = "Barzdukas", Email = "gytis.barzdukas@gtoo.microsoft.com",
-                    SurveyDate = DateTime.Parse("2012-09-01") },
-                new Student { FirstMidName = "Yan",      LastName = "Li", Email = "yan.li@gtoo.microsoft.com",
-                    SurveyDate = DateTime.Parse("2012-09-01") },
-                new Student { FirstMidName = "Peggy",    LastName = "Justice", Email = "peggy.justice@gtoo.microsoft.com",
-                    SurveyDate = DateTime.Parse("2011-09-01") },
-                new Student { FirstMidName = "Laura",    LastName = "Norman", Email = "laura.norman@gtoo.microsoft.com",
-                    SurveyDate = DateTime.Parse("2013-09-01") },
-                new Student { FirstMidName = "Nino",     LastName = "Olivetto", Email = "nino.olivetto@gtoo.microsoft.com",
-                    SurveyDate = DateTime.Parse("2005-09-01") }
+                new Student { FirstMidName = "Carson",   LastName = "Alexander", Email="carson.alexander@grouptoo.edu",
+                    EnrollmentDate = DateTime.Parse("2010-09-01") },
+                new Student { FirstMidName = "Meredith", LastName = "Alonso", Email="meredith.alonso@grouptoo.edu",
+                    EnrollmentDate = DateTime.Parse("2012-09-01") },
+                new Student { FirstMidName = "Arturo",   LastName = "Anand", Email="arturo.anand@grouptoo.edu",
+                    EnrollmentDate = DateTime.Parse("2013-09-01") },
+                new Student { FirstMidName = "Gytis",    LastName = "Barzdukas", Email="gytis.barzdukas@grouptoo.edu",
+                    EnrollmentDate = DateTime.Parse("2012-09-01") },
+                new Student { FirstMidName = "Yan",      LastName = "Li", Email="yan.li@grouptoo.edu",
+                    EnrollmentDate = DateTime.Parse("2012-09-01") },
+                new Student { FirstMidName = "Peggy",    LastName = "Justice", Email="peggy.justice@grouptoo.edu",
+                    EnrollmentDate = DateTime.Parse("2011-09-01") },
+                new Student { FirstMidName = "Laura",    LastName = "Norman", Email="laura.norman@grouptoo.edu",
+                    EnrollmentDate = DateTime.Parse("2013-09-01") },
+                new Student { FirstMidName = "Nino",     LastName = "Olivetto", Email="nino.olivetto@grouptoo.edu",
+                    EnrollmentDate = DateTime.Parse("2005-09-01") }
             };
 
-            foreach (Student u in students)
+            foreach (Student s in students)
             {
-                context.Students.Add(u);
+                context.Students.Add(s);
             }
             context.SaveChanges();
 
             var instructors = new Instructor[]
             {
-                new Instructor { FirstMidName = "Kim",     LastName = "Abercrombie", Email = "kim.abercrombie@gtoo.microsoft.com",
+                new Instructor { FirstMidName = "Kim",     LastName = "Abercrombie", Email="kim.abercrombie@grouptoo.edu",
                     HireDate = DateTime.Parse("1995-03-11") },
-                new Instructor { FirstMidName = "Fadi",    LastName = "Fakhouri", Email = "fadi.fakhouri@gtoo.microsoft.com",
+                new Instructor { FirstMidName = "Fadi",    LastName = "Fakhouri", Email="fadi.fakhouri@grouptoo.edu",
                     HireDate = DateTime.Parse("2002-07-06") },
-                new Instructor { FirstMidName = "Roger",   LastName = "Harui", Email = "roger.harui@gtoo.microsoft.com",
+                new Instructor { FirstMidName = "Roger",   LastName = "Harui", Email="roger.harui@grouptoo.edu",
                     HireDate = DateTime.Parse("1998-07-01") },
-                new Instructor { FirstMidName = "Candace", LastName = "Kapoor", Email = "candace.kapoor@gtoo.microsoft.com",
+                new Instructor { FirstMidName = "Candace", LastName = "Kapoor", Email="candace.kapoor@grouptoo.edu",
                     HireDate = DateTime.Parse("2001-01-15") },
-                new Instructor { FirstMidName = "Roger",   LastName = "Zheng", Email = "roger.zheng@gtoo.microsoft.com",
+                new Instructor { FirstMidName = "Roger",   LastName = "Zheng", Email="roger.zheng@grouptoo.edu",
                     HireDate = DateTime.Parse("2004-02-12") }
             };
 
@@ -66,16 +66,16 @@ namespace GroupTooUniversity.Data
 
             var departments = new Department[]
             {
-                new Department { Name = "English",
+                new Department { Name = "English",     Budget = 350000,
                     StartDate = DateTime.Parse("2007-09-01"),
                     InstructorID  = instructors.Single( i => i.LastName == "Abercrombie").ID },
-                new Department { Name = "Mathematics",
+                new Department { Name = "Mathematics", Budget = 100000,
                     StartDate = DateTime.Parse("2007-09-01"),
                     InstructorID  = instructors.Single( i => i.LastName == "Fakhouri").ID },
-                new Department { Name = "Engineering",
+                new Department { Name = "Engineering", Budget = 350000,
                     StartDate = DateTime.Parse("2007-09-01"),
                     InstructorID  = instructors.Single( i => i.LastName == "Harui").ID },
-                new Department { Name = "Economics",
+                new Department { Name = "Economics",   Budget = 100000,
                     StartDate = DateTime.Parse("2007-09-01"),
                     InstructorID  = instructors.Single( i => i.LastName == "Kapoor").ID }
             };
@@ -89,25 +89,25 @@ namespace GroupTooUniversity.Data
             var courses = new Course[]
             {
                 new Course {CourseID = 1050, Title = "Chemistry",      Credits = 3,
-                    DepartmentID = departments.Single( u => u.Name == "Engineering").DepartmentID
+                    DepartmentID = departments.Single( s => s.Name == "Engineering").DepartmentID
                 },
                 new Course {CourseID = 4022, Title = "Microeconomics", Credits = 3,
-                    DepartmentID = departments.Single( u => u.Name == "Economics").DepartmentID
+                    DepartmentID = departments.Single( s => s.Name == "Economics").DepartmentID
                 },
                 new Course {CourseID = 4041, Title = "Macroeconomics", Credits = 3,
-                    DepartmentID = departments.Single( u => u.Name == "Economics").DepartmentID
+                    DepartmentID = departments.Single( s => s.Name == "Economics").DepartmentID
                 },
                 new Course {CourseID = 1045, Title = "Calculus",       Credits = 4,
-                    DepartmentID = departments.Single( u => u.Name == "Mathematics").DepartmentID
+                    DepartmentID = departments.Single( s => s.Name == "Mathematics").DepartmentID
                 },
                 new Course {CourseID = 3141, Title = "Trigonometry",   Credits = 4,
-                    DepartmentID = departments.Single( u => u.Name == "Mathematics").DepartmentID
+                    DepartmentID = departments.Single( s => s.Name == "Mathematics").DepartmentID
                 },
                 new Course {CourseID = 2021, Title = "Composition",    Credits = 3,
-                    DepartmentID = departments.Single( u => u.Name == "English").DepartmentID
+                    DepartmentID = departments.Single( s => s.Name == "English").DepartmentID
                 },
                 new Course {CourseID = 2042, Title = "Literature",     Credits = 4,
-                    DepartmentID = departments.Single( u => u.Name == "English").DepartmentID
+                    DepartmentID = departments.Single( s => s.Name == "English").DepartmentID
                 },
             };
 
@@ -178,64 +178,88 @@ namespace GroupTooUniversity.Data
             }
             context.SaveChanges();
 
-            var surveys = new Survey[]
+            var enrollments = new Enrollment[]
             {
-                new Survey {
-                    StudentID = students.Single(u => u.LastName == "Alexander").ID,
+                new Enrollment {
+                    StudentID = students.Single(s => s.LastName == "Alexander").ID,
                     CourseID = courses.Single(c => c.Title == "Chemistry" ).CourseID,
+                    Grade = Grade.A
                 },
-                    new Survey {
-                    StudentID = students.Single(u => u.LastName == "Alexander").ID,
+                    new Enrollment {
+                    StudentID = students.Single(s => s.LastName == "Alexander").ID,
                     CourseID = courses.Single(c => c.Title == "Microeconomics" ).CourseID,
+                    Grade = Grade.C
                     },
-                    new Survey {
-                    StudentID = students.Single(u => u.LastName == "Alexander").ID,
+                    new Enrollment {
+                    StudentID = students.Single(s => s.LastName == "Alexander").ID,
                     CourseID = courses.Single(c => c.Title == "Macroeconomics" ).CourseID,
+                    Grade = Grade.B
                     },
-                    new Survey {
-                        StudentID = students.Single(u => u.LastName == "Alonso").ID,
+                    new Enrollment {
+                        StudentID = students.Single(s => s.LastName == "Alonso").ID,
                     CourseID = courses.Single(c => c.Title == "Calculus" ).CourseID,
+                    Grade = Grade.B
                     },
-                    new Survey {
-                        StudentID = students.Single(u => u.LastName == "Alonso").ID,
+                    new Enrollment {
+                        StudentID = students.Single(s => s.LastName == "Alonso").ID,
                     CourseID = courses.Single(c => c.Title == "Trigonometry" ).CourseID,
+                    Grade = Grade.B
                     },
-                    new Survey {
-                    StudentID = students.Single(u => u.LastName == "Alonso").ID,
+                    new Enrollment {
+                    StudentID = students.Single(s => s.LastName == "Alonso").ID,
                     CourseID = courses.Single(c => c.Title == "Composition" ).CourseID,
+                    Grade = Grade.B
                     },
-                    new Survey {
-                    StudentID = students.Single(u => u.LastName == "Anand").ID,
+                    new Enrollment {
+                    StudentID = students.Single(s => s.LastName == "Anand").ID,
                     CourseID = courses.Single(c => c.Title == "Chemistry" ).CourseID
                     },
-                    new Survey {
-                    StudentID = students.Single(u => u.LastName == "Anand").ID,
+                    new Enrollment {
+                    StudentID = students.Single(s => s.LastName == "Anand").ID,
                     CourseID = courses.Single(c => c.Title == "Microeconomics").CourseID,
+                    Grade = Grade.B
                     },
-                new Survey {
-                    StudentID = students.Single(u => u.LastName == "Barzdukas").ID,
+                new Enrollment {
+                    StudentID = students.Single(s => s.LastName == "Barzdukas").ID,
                     CourseID = courses.Single(c => c.Title == "Chemistry").CourseID,
+                    Grade = Grade.B
                     },
-                    new Survey {
-                    StudentID = students.Single(u => u.LastName == "Li").ID,
+                    new Enrollment {
+                    StudentID = students.Single(s => s.LastName == "Li").ID,
                     CourseID = courses.Single(c => c.Title == "Composition").CourseID,
+                    Grade = Grade.B
                     },
-                    new Survey {
-                    StudentID = students.Single(u => u.LastName == "Justice").ID,
+                    new Enrollment {
+                    StudentID = students.Single(s => s.LastName == "Justice").ID,
                     CourseID = courses.Single(c => c.Title == "Literature").CourseID,
+                    Grade = Grade.B
                     }
             };
 
-            foreach (Survey s in surveys)
+            foreach (Enrollment e in enrollments)
             {
-                var SurveyInDataBase = context.Surveys.Where(
-                    u =>
-                            u.Student.ID == s.StudentID &&
-                            u.Course.CourseID == s.CourseID).SingleOrDefault();
-                if (SurveyInDataBase == null)
+                var enrollmentInDataBase = context.Enrollments.Where(
+                    s =>
+                            s.Student.ID == e.StudentID &&
+                            s.Course.CourseID == e.CourseID).SingleOrDefault();
+                if (enrollmentInDataBase == null)
                 {
-                    context.Surveys.Add(s);
+                    context.Enrollments.Add(e);
                 }
+            }
+            context.SaveChanges();
+
+            var surveys = new Survey[]
+            {
+                new Survey {
+                    Title="FinalSurvey", Owner = instructors.Single(i => i.LastName == "Abercrombie"), CourseID = courses.Single(c => c.Title == "Literature").CourseID,
+                    StartDate = DateTime.Parse("2019-02-12"), EndDate = DateTime.Parse("2019-07-01")
+                }
+            };
+
+            foreach (Survey x in surveys)
+            {
+                context.Surveys.Add(x);
             }
             context.SaveChanges();
         }

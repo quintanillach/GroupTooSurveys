@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GroupTooUniversity.Models
 {
@@ -20,8 +19,7 @@ namespace GroupTooUniversity.Models
         public int DepartmentID { get; set; }
 
         public Department Department { get; set; }
-
-        public ICollection<Survey> Surveys { get; set; }
+        public ICollection<Enrollment> Enrollments { get; set; }
         public ICollection<CourseAssignment> CourseAssignments { get; set; }
     }
 }

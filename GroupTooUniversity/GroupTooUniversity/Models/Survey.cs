@@ -25,12 +25,20 @@ namespace GroupTooUniversity.Models
         public int CourseID { get; set; }
 
         public bool Published { get; set; }
+        public bool isComplete { get; set; }
 
         public Course Course { get; set; }
 
-        public Student Student { get; set; }
+        public DateTime StartDate { get; set; }
 
-        public Instructor Owner { get; set; }
+        public DateTime EndDate { get; set; }
+
+        public Person Owner { get; set; }
         public virtual ICollection<Question> Questions { get; set; }
+
+        public bool IsActive
+        {
+            get { return StartDate < DateTime.Now && EndDate > DateTime.Now; }
+        }
     }
 }

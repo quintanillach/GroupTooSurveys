@@ -80,3 +80,26 @@ C:\Users\chris\Source\Repos\quintanillach\GroupTooSurveys\GroupTooUniversity\Gro
 C:\Users\chris\Source\Repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Instructors\Details.g.cshtml.cs
 C:\Users\chris\Source\Repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Instructors\Edit.g.cshtml.cs
 C:\Users\chris\Source\Repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Instructors\Index.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Courses\Create.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Courses\Delete.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Courses\Details.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Courses\Edit.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Courses\Index.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Instructors\Create.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Instructors\Delete.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Instructors\Details.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Instructors\Edit.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Instructors\Index.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Courses\UpdateCourseCredits.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Departments\Create.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Departments\Delete.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Departments\Details.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Departments\Edit.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Departments\Index.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\bin\Debug\netcoreapp2.2\Microsoft.Azure.Documents.ServiceInterop.dll
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\bin\Debug\netcoreapp2.2\Cosmos.CRTCompat.dll
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Surveys\Create.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Surveys\Delete.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Surveys\Details.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Surveys\Edit.g.cshtml.cs
+C:\Users\Not User\source\repos\quintanillach\GroupTooSurveys\GroupTooUniversity\GroupTooUniversity\obj\Debug\netcoreapp2.2\Razor\Views\Surveys\Index.g.cshtml.cs

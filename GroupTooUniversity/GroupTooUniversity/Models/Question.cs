@@ -2,7 +2,7 @@
 
 namespace GroupTooUniversity.Models
 {
-    public enum QuestionType
+    public enum Type
     {
         SimpleText,
         MultipleChoice,
@@ -15,7 +15,7 @@ namespace GroupTooUniversity.Models
     {
         public Question()
         {
-            this.Type = QuestionType.SimpleText;
+            this.Type = Type.SimpleText;
         }
 
         public int Id { get; set; }
@@ -24,15 +24,19 @@ namespace GroupTooUniversity.Models
         [Display(Name = "Question")]
         public string Text { get; set; }
 
-        public QuestionType Type { get; set; }
+        public Type Type { get; set; }
 
         [Display(Name = "Answer Choices")]
-        public string PossibleAnswers { get; set; }
+        public string PossibleAnswers
+        {
+            get; set;
+        }
 
         public int SurveyId { get; set; }
 
         // Navigation properties
         public Survey Survey { get; set; }
+        public Response Response { get; set; }
 
     }
 }

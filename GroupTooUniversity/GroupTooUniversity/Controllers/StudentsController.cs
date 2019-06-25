@@ -21,10 +21,10 @@ namespace GroupTooUniversity.Controllers
 
         // GET: Students
         public async Task<IActionResult> Index(
-    string sortOrder,
-    string currentFilter,
-    string searchString,
-    int? pageNumber)
+            string sortOrder,
+            string currentFilter,
+            string searchString,
+            int? pageNumber)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
@@ -54,10 +54,10 @@ namespace GroupTooUniversity.Controllers
                     students = students.OrderByDescending(s => s.LastName);
                     break;
                 case "Date":
-                    students = students.OrderBy(s => s.SurveyDate);
+                    students = students.OrderBy(s => s.EnrollmentDate);
                     break;
                 case "date_desc":
-                    students = students.OrderByDescending(s => s.SurveyDate);
+                    students = students.OrderByDescending(s => s.EnrollmentDate);
                     break;
                 default:
                     students = students.OrderBy(s => s.LastName);
@@ -77,8 +77,8 @@ namespace GroupTooUniversity.Controllers
             }
 
             var student = await _context.Students
-                 .Include(u => u.Courses)
-                     .ThenInclude(s => s.Surveys)
+                 .Include(s => s.Enrollments)
+                     .ThenInclude(e => e.Course)
                  .AsNoTracking()
                  .FirstOrDefaultAsync(m => m.ID == id);
 
@@ -101,7 +101,8 @@ namespace GroupTooUniversity.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SurveyDate,Email,FirstMidName,LastName")] Student student)
+        public async Task<IActionResult> Create(
+            [Bind("EnrollmentDate,Email,FirstMidName,LastName")] Student student)
         {
             try
             {
@@ -149,11 +150,11 @@ namespace GroupTooUniversity.Controllers
             {
                 return NotFound();
             }
-            var studentToUpdate = await _context.Students.FirstOrDefaultAsync(u => u.ID == id);
+            var studentToUpdate = await _context.Students.FirstOrDefaultAsync(s => s.ID == id);
             if (await TryUpdateModelAsync<Student>(
                 studentToUpdate,
                 "",
-                u => u.FirstMidName, u => u.LastName, u => u.Email, u => u.SurveyDate))
+                s => s.FirstMidName, s => s.LastName, s => s.Email, s => s.EnrollmentDate))
             {
                 try
                 {
@@ -196,7 +197,6 @@ namespace GroupTooUniversity.Controllers
 
             return View(student);
         }
-
         // POST: Students/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
